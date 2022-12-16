@@ -4,6 +4,11 @@
 	"description": "ModuleFederation support for create-create-app",
 	"license": "MIT",
 	"main": "dist/index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/SurjitSahoo/cra-mf.git",
+		"directory": "packages/cra-mf"
+	},
 	"scripts": {
 		"build": "tsc"
 	},
