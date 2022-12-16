@@ -1,0 +1,14 @@
+[
+	{
+		"remoteUrl": "http://localhost:3001/remoteEntry.js",
+		"moduleToLoad": "./AppRoutes",
+		"remoteName": "app1",
+		"localRoute": "app1"
+	},
+	{
+		"remoteUrl": "http://localhost:3002/remoteEntry.js",
+		"moduleToLoad": "./AppRoutes",
+		"remoteName": "app2",
+		"localRoute": "app2"
+	}
+]

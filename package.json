@@ -1,0 +1,14 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "examples/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "lerna run --parallel start --scope=example*"
+  },
+  "devDependencies": {
+    "lerna": "^6.1.0"
+  }
+}

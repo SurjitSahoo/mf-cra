@@ -1,0 +1,23 @@
+{
+	"name": "cra-mf",
+	"version": "0.0.1",
+	"description": "ModuleFederation support for create-create-app",
+	"license": "MIT",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "tsc"
+	},
+	"bin": {
+		"cra-mf": "./bin/cra-mf.js"
+	},
+	"peerDependencies": {
+		"react": ">= 16",
+		"react-scripts": "^5.0.0"
+	},
+	"engines": {
+		"node": ">=14.0.0"
+	},
+	"devDependencies": {
+		"typescript": "^4.9.4"
+	}
+}
