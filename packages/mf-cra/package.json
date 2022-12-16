@@ -1,6 +1,6 @@
 {
 	"name": "mf-cra",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "ModuleFederation support for create-create-app",
 	"license": "MIT",
 	"main": "dist/index.js",
@@ -9,6 +9,13 @@
 		"url": "https://github.com/SurjitSahoo/mf-cra.git",
 		"directory": "packages/mf-cra"
 	},
+	"keywords": [
+		"create-react-app",
+		"micro-frontends",
+		"micro-front-end",
+		"module-federation",
+		"webpack-module-federation"
+	],
 	"scripts": {
 		"build": "rimraf dist && tsc"
 	},
