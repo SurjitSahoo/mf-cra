@@ -1,19 +1,19 @@
 {
-	"name": "cra-mf",
+	"name": "mf-cra",
 	"version": "0.0.1",
 	"description": "ModuleFederation support for create-create-app",
 	"license": "MIT",
 	"main": "dist/index.js",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/SurjitSahoo/cra-mf.git",
-		"directory": "packages/cra-mf"
+		"url": "https://github.com/SurjitSahoo/mf-cra.git",
+		"directory": "packages/mf-cra"
 	},
 	"scripts": {
-		"build": "tsc"
+		"build": "rimraf dist && tsc"
 	},
 	"bin": {
-		"cra-mf": "./bin/cra-mf.js"
+		"mf-cra": "./bin/mf-cra.js"
 	},
 	"peerDependencies": {
 		"react": ">= 16",
@@ -23,6 +23,7 @@
 		"node": ">=14.0.0"
 	},
 	"devDependencies": {
+		"rimraf": "^3.0.2",
 		"typescript": "^4.9.4"
 	}
 }

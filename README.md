@@ -1,4 +1,4 @@
-# CRA-MF
+# MF-CRA
 
 Module Federation support for Create-React-App without using "eject" or creating a fork of "react-scripts", just by adding a single configuration `moduleFederation.config.js` file at the root of your application
 
@@ -7,7 +7,7 @@ Module Federation support for Create-React-App without using "eject" or creating
 1. Install the latest version of the package form npm as a dependency
 
    ```sh
-   npm i cra-mf
+   npm i mf-cra
    ```
 
 2. Create a MF configuration file in your project's root directory
@@ -19,14 +19,14 @@ Module Federation support for Create-React-App without using "eject" or creating
      └── package.json
    ```
 
-3. Update the existing calls to `react-scripts` in the `scripts` section of your `package.json` to use the `cra-mf` CLI:
+3. Update the existing calls to `react-scripts` in the `scripts` section of your `package.json` to use the `mf-cra` CLI:
 
    ```diff title="package.json"
    "scripts": {
    -  "start": "react-scripts start",
-   +  "start": "cra-mf start",
+   +  "start": "mf-cra start",
    -  "build": "react-scripts build",
-   +  "build": "cra-mf build",
+   +  "build": "mf-cra build",
       "test": "react-scripts test",
       "eject": "react-scripts eject"
    }
@@ -73,7 +73,7 @@ You can use dynamic module federation feature to define remotes at run-time and 
 ### Example:
 
 ```jsx
-import useFederatedComponent from 'cra-mf';
+import useFederatedComponent from 'mf-cra';
 
 export default function DynamicRemoteComponent() {
   const { Component, isError } = useFederatedComponent({
@@ -91,7 +91,7 @@ export default function DynamicRemoteComponent() {
 ### Usage with typescript
 
 ```tsx
-import useFederatedComponent, { IFederatedComponent } from 'cra-mf';
+import useFederatedComponent, { IFederatedComponent } from 'mf-cra';
 
 interface Props {
   remote: IFederatedComponent;

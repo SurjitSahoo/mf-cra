@@ -1,6 +1,6 @@
 import { Suspense, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
-import useFederatedComponent, { IFederatedComponent } from 'cra-mf';
+import useFederatedComponent, { IFederatedComponent } from 'mf-cra';
 import remoteApps from './remoteApps.json';
 
 interface Props {
