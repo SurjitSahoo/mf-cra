@@ -2,10 +2,29 @@ import { Routes, Route, Link } from 'react-router-dom';
 import image from 'assets/images/image.jpg';
 import 'index.css';
 
+// @ts-ignore
+import { useCount } from 'centralRedux/store';
+
 export default function AppRoutes() {
+  const { count, increment, decrement, clear } = useCount();
+
   return (
     <div className='bg-pink-300'>
       <div className='text-3xl text-pink-900'>App 1</div>
+
+      <div className='bg-pink-200 rounded mx-1 p-2 my-1 text-purple-700 text-2xl '>
+        <div className='ml-8 text-purple-600'>Centralized Redux stuff</div>
+        <div className='ml-10 font-semibold'>Count: {count}</div>
+        <button onClick={increment} className='bg-green-700 text-white px-2 rounded'>
+          increment
+        </button>
+        <button onClick={decrement} className='bg-green-400 text-slate-500 px-2 rounded mx-2'>
+          decrement
+        </button>
+        <button onClick={clear} className='bg-slate-400 text-white px-2 rounded'>
+          clear
+        </button>
+      </div>
 
       <Link to='route1' className='text-blue-600 mr-4'>
         link 1

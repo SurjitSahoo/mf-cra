@@ -1,12 +1,12 @@
 const { dependencies } = require('./package.json');
 
 module.exports = {
-	name: 'shell_app', // change me
+	name: 'central_redux_store', // change me
 	filename: 'remoteEntry.js',
-	exposes: {},
-	remotes: {
-		"centralRedux": "central_redux_store@http://localhost:4001/remoteEntry.js",
+	exposes: {
+		'./store': './src/reduxStore/index.ts',
 	},
+	remotes: {},
 	shared: {
 		...dependencies,
 		react: {
@@ -18,10 +18,6 @@ module.exports = {
 		"react-dom": {
 			singleton: true,
 			requiredVersion: dependencies["react-dom"],
-		},
-		"react-router-dom": {
-			singleton: true,
-			requiredVersion: dependencies["react-router-dom"]
 		}
 	}
 }

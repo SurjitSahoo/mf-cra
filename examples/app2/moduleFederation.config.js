@@ -4,10 +4,12 @@ module.exports = {
 	name: 'app2', // change me
 	filename: 'remoteEntry.js',
 	exposes: {
-		"./hello": "./src/hello.tsx",
-		"./AppRoutes": "./src/routes.tsx"
+		"./hello": "./src/mf/hello.tsx",
+		"./AppRoutes": "./src/mf/routes.tsx"
 	},
-	remotes: {},
+	remotes: {
+		"centralRedux": "central_redux_store@http://localhost:4001/remoteEntry.js",
+	},
 	shared: {
 		...dependencies,
 		react: {
