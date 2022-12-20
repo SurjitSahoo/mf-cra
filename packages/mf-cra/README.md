@@ -108,6 +108,6 @@ export default function DynamicRemoteComponent({ remote }: Props) {
 
 ## Troubleshoot
 
-- **Page refresh doesn't work with react-router-dom?**
+- **Page refresh on nested routes doesn't work with react-router-dom?**
 
-  _Webpack config `output.publicPath` defaults to `"auto"` while using this library, It causes problem with react-router-dom. To fix this issue, please define env variable `PUBLIC_URL=http://url.where.your.application.is.or.hosted`, e.g. in local you can use `PUBLIC_URL="http://localhost:3000"`_
+  _Webpack config `output.publicPath` defaults to `"auto"` while using this library, Override this value with your application URL. Please define an env variable `PUBLIC_URL=http://url.where.your.application.is.or.hosted`, e.g. in local you can use `PUBLIC_URL="http://localhost:3000"`, That should fix the issue_

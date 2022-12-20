@@ -1,6 +1,6 @@
 {
 	"name": "mf-cra",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "ModuleFederation support for create-create-app",
 	"license": "MIT",
 	"main": "dist/index.js",
