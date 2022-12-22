@@ -66,6 +66,8 @@ module.exports = {
 };
 ```
 
+> TIP: To statically import federated components, webpack needs a top level promise, so that it can pause the execution there and load the remote components before it can be rendered. To achieve this, rename `src/index.js` to `src/bootstrap.js`, and create a new file `src/index.js` and import `bootstrap.js` file in it with JavaScript's `import` function. This function returns a promise. e.g. `import('bootstrap.js')`
+
 ## Dynamic Module Federation
 
 You can use dynamic module federation feature to define remotes at run-time and load modules from them dynamically.
