@@ -1,4 +1,5 @@
 const { ModuleFederationPlugin } = require('webpack').container;
+const { FederatedTypesPlugin } = require('@module-federation/typescript');
 const fs = require('fs');
 const path = require('path');
 
@@ -25,7 +26,8 @@ const override = config => {
 
   if (fs.existsSync(mfConfigPath)) {
     const mfConfig = require(mfConfigPath);
-    config.plugins.push(new ModuleFederationPlugin(mfConfig));
+    config.plugins.push(new FederatedTypesPlugin({ federationConfig: mfConfig, typescriptFolderName: path.resolve(projectDir, 'public/@mf-types') }));
+    // config.plugins.push(new ModuleFederationPlugin(mfConfig));
     config.output.publicPath = getPublicPath();
   }
 
