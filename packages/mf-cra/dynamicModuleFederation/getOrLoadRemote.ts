@@ -42,7 +42,8 @@ export const getOrLoadRemote = ({ remoteName, shareScope, remoteUrl: remoteFallb
         // inject remote if a fallback exists and call the same onload function
         var d = document,
           script = d.createElement('script');
-        script.type = 'text/javascript';
+        // script.type = 'text/javascript';
+        script.type = 'module';
         // mark as data-webpack so runtime can track it internally
         script.setAttribute('data-webpack', `${remoteName}`);
         script.async = true;
