@@ -9,6 +9,6 @@
     "start": "lerna run --parallel start --scope=example*"
   },
   "devDependencies": {
-    "lerna": "^6.1.0"
+    "lerna": "^10.0.0"
   }
 }
